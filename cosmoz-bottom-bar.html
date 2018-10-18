@@ -89,7 +89,7 @@ See demo for example usage
 				white-space: nowrap;
 			}
 
-			#toolbar ::slotted(*), #extraToolbarSlot ::slotted(*) {
+			#toolbar ::slotted(*) {
 				margin: 0 0.29em;
 				min-width: 40px;
     			min-height: 40px;
@@ -98,8 +98,12 @@ See demo for example usage
 				@apply --cosmoz-bottom-bar-toolbar-item;
 			}
 
-			#toolbar ::slotted([hidden]), #extraToolbarSlot ::slotted([hidden]) {
+			#toolbar ::slotted([hidden]) {
 				display: none !important;
+			}
+
+			#extraToolbarSlot ::slotted(*) {
+				@apply --cosmoz-bottom-bar-extra-toolbar-item;
 			}
 
 			#dropdown {
